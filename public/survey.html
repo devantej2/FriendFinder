@@ -8,6 +8,13 @@
     <title>FriendFinder Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
     <style>
         body {
@@ -24,11 +31,11 @@
         }
 
         .required {
-            border-bottom: 2px solid black;
+            margin: auto;
         }
 
-        .questions {
-            margin: 20px auto;
+        h3 {
+            border-bottom: 2px solid black;
         }
     </style>
 </head>
@@ -47,32 +54,21 @@
             <div class="row">
                 <div class="col">
                     <h3>About You</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="nameInput">Name (Required) </label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nameInput">Link to Photo Image (Required) </label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="questions">
-            <div class="row">
-                <div class="col">
-
+                    <div class="form-group">
+                        <label for="nameInput">Name (Required) </label>
+                        <input type="text" name="" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameInput">Link to Photo Image (Required) </label>
+                        <input type="text" name="" class="form-control" id="photo" required>
+                    </div>
                     <div class="form-group">
                         <h5> Question 1</h5>
-                        <label for="formGroupExampleInput">Your mind is always buzzing with unexplored ideas and
+                        <label for="Question1">Your mind is always buzzing with unexplored ideas and
                             plans.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
+                        <select class="custom-select" id="question1">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -82,130 +78,183 @@
 
                     <div class="form-group">
                         <h5> Question 2</h5>
-                        <label for="formGroupExampleInput">Generally speaking, you rely more on your experience than
+                        <label for="Question2">Generally speaking, you rely more on your experience than
                             your
                             imagination.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <select class="custom-select" id="question2">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <h5> Question 3</h5>
-                        <label for="formGroupExampleInput"> You find it easy to stay relaxed and focused even when there
+                        <label for="Question3"> You find it easy to stay relaxed and focused even when there
                             is
                             some pressure.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <select class="custom-select" id="question3">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <h5> Question 4</h5>
-                        <label for="formGroupExampleInput">You rarely do something just out of sheer curiosity.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <label for="Question4">You rarely do something just out of sheer curiosity.</label>
+                        <select class="custom-select" id="question4">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <h5> Question 5</h5>
-                        <label for="formGroupExampleInput">People can rarely upset you.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <label for="Question5">People can rarely upset you.</label>
+                        <select class="custom-select" id="question5">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <h5> Question 6</h5>
-                        <label for="formGroupExampleInput">It is often difficult for you to relate to other people's
+                        <label for="Question6">It is often difficult for you to relate to other people's
                             feelings.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <select class="custom-select" id="question6">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <h5> Question 7</h5>
-                        <label for="formGroupExampleInput">In a discussion, truth should be more important than people's
+                        <label for="Question7">In a discussion, truth should be more important than people's
                             sensitivities.</label>
-                        <select class="custom-select">
+                        <select class="custom-select" id="question7">
                             <option select></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <h5> Question 8</h5>
-                        <label for="formGroupExampleInput">You rarely get carried away by fantasies and ideas.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <label for="Question8">You rarely get carried away by fantasies and ideas.</label>
+                        <select class="custom-select" id="question8">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <h5> Question 9</h5>
-                        <label for="formGroupExampleInput">You think that everyone's views should be respected
+                        <label for="Question9">You think that everyone's views should be respected
                             regardless of
                             whether they are supported by facts or not.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <select class="custom-select" id="question9">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <h5> Question 10</h5>
-                        <label for="formGroupExampleInput">You feel more energetic after spending time with a group of
+                        <label for="Question10">You feel more energetic after spending time with a group of
                             people.</label>
-                        <select class="custom-select">
-                            <option selected></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
+                        <select class="custom-select" id="question10">
+                            <option select></option>
+                            <option value=1>1 (Strongly Disagree)</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5 (Strongly Agree)</option>
                         </select>
                     </div>
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary submit" type="submit">Submit</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="modal fade" id="friendModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Most Compatible Friend!</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img id="matchPhoto" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+
+        // Creating an array to hold the user input values
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+                $("#question1").val(),
+                $("#question2").val(),
+                $("#question3").val(),
+                $("#question4").val(),
+                $("#question5").val(),
+                $("#question6").val(),
+                $("#question7").val(),
+                $("#question8").val(),
+                $("#question9").val(),
+                $("#question10").val()
+            ]
+        };
+
+        // Taking the values store in the newFriend array to display on the modal
+        $.post("/api/friends", newFriend, function (data) {
+
+            $("#matchName").text(data.name);
+            $("#matchPhoto").attr("src", data.photo);
+            $("#friendModal").modal("toggle");
+        });
+
+        return false;
+    });
+</script>
